@@ -1,0 +1,44 @@
+# commit to be tagged for new release
+commit = "HEAD"
+
+project_name = "Talos System Extensions"
+github_repo = "siderolabs/extensions"
+match_deps = "^github.com/((talos-systems|siderolabs)/[a-zA-Z0-9-]+)$"
+
+# previous release
+<<<<<<< HEAD
+previous = "v1.5.3"
+=======
+previous = "v1.5.0"
+>>>>>>> donch-talos-extensions/feat/zfs-tools-ext
+
+pre_release = false
+
+preface = """\
+See [Talos Linux documentation](https://www.talos.dev/v1.6/talos-guides/configuration/system-extensions/) for information on using system extensions.
+"""
+
+[notes]
+<<<<<<< HEAD
+=======
+    [notes.btrfs]
+        title = "BTRFS"
+        description = """\
+BTRFS drivers is now supported as Talos System Extension. Requires Talos v1.6.0 or later.
+"""
+
+    [notes.zfs]
+        title = "ZFS"
+        description = """\
+ZFS extensions now also ship zfs-tools and an extension service that imports all zpools on startup .
+"""
+
+    [notes.updates]
+        title = "Component Updates"
+        description = """\
+* DRBD: 9.2.5
+"""
+>>>>>>> donch-talos-extensions/feat/zfs-tools-ext
+
+
+[make_deps]
